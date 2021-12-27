@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1308115005371491210}
   - component: {fileID: 1308115005371491211}
+  - component: {fileID: 2087745577572345969}
   m_Layer: 0
   m_Name: Red-Lines-PLanet
   m_TagString: Untagged
@@ -113,6 +114,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2087745577572345969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308115005371491213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 736921f6f0e7e524385d6956cf105506, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minMoveDistance: -0.5
+  maxMoveDistance: 0.5
 --- !u!1 &5187447132576088930
 GameObject:
   m_ObjectHideFlags: 0

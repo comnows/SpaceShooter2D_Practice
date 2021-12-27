@@ -352,6 +352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7704765950257855013}
   - component: {fileID: 2674120870375124257}
+  - component: {fileID: 1780733430335823007}
   m_Layer: 0
   m_Name: blue-planet (1)
   m_TagString: Untagged
@@ -424,6 +425,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1780733430335823007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5747023433205255596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 736921f6f0e7e524385d6956cf105506, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minMoveDistance: -0.5
+  maxMoveDistance: 0.5
 --- !u!1 &6107897872364107248
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,6 +449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4846658871766127235}
   - component: {fileID: 7453525811161913559}
+  - component: {fileID: 3892821510085379274}
   m_Layer: 0
   m_Name: blue-planet
   m_TagString: Untagged
@@ -506,6 +522,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3892821510085379274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6107897872364107248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 736921f6f0e7e524385d6956cf105506, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minMoveDistance: -0.5
+  maxMoveDistance: 0.5
 --- !u!1 &8248631369778400050
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,6 +579,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8248631370219128622}
   - component: {fileID: 8248631370219128623}
+  - component: {fileID: 2065708220579078159}
   m_Layer: 0
   m_Name: Red-Lines-PLanet
   m_TagString: Untagged
@@ -621,3 +652,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2065708220579078159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8248631370219128617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 736921f6f0e7e524385d6956cf105506, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minMoveDistance: -0.5
+  maxMoveDistance: 0.5

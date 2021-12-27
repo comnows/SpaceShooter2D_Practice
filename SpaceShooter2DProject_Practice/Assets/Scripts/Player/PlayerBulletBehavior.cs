@@ -37,7 +37,14 @@ public class PlayerBulletBehavior : MonoBehaviour
                 enemyProperties.Update_EnemyHealth(-bulletDamage);
             }
 
-            Instantiate(hitEffectObj, transform.position, Quaternion.identity);
+            GameObject hitVFX = Instantiate(hitEffectObj, transform.position, Quaternion.identity);
+
+            FollowTarget followTarget = hitVFX.GetComponent<FollowTarget>();
+            
+            if(followTarget != null)
+            {
+                followTarget.SetTargetToFollow(other.gameObject);
+            }
             
             Destroy(gameObject);
         }

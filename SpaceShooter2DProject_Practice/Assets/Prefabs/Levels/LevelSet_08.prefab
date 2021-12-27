@@ -124,6 +124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1505923176797980149}
   - component: {fileID: 6745798636611093820}
+  - component: {fileID: 1819839552282424654}
   m_Layer: 0
   m_Name: cyan-planet
   m_TagString: Untagged
@@ -196,6 +197,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1819839552282424654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062952915286568967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 736921f6f0e7e524385d6956cf105506, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minMoveDistance: -0.5
+  maxMoveDistance: 0.5
 --- !u!1 &3922036039756464748
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,6 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7041579239198884855}
   - component: {fileID: 4788923343161517032}
+  - component: {fileID: 3937010890777338027}
   m_Layer: 0
   m_Name: Purple-Planet-wih-Moon
   m_TagString: Untagged
@@ -278,6 +294,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3937010890777338027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3922036039756464748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 736921f6f0e7e524385d6956cf105506, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minMoveDistance: -0.5
+  maxMoveDistance: 0.5
 --- !u!1 &7492917227915758033
 GameObject:
   m_ObjectHideFlags: 0

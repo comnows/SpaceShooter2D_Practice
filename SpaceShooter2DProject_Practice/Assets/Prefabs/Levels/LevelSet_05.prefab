@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5744986345920425015}
   - component: {fileID: 5020376302386105489}
+  - component: {fileID: 5806348048579886052}
   m_Layer: 0
   m_Name: Purple-Planet-wih-Moon
   m_TagString: Untagged
@@ -113,6 +114,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5806348048579886052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2705145812226611843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 736921f6f0e7e524385d6956cf105506, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minMoveDistance: -0.5
+  maxMoveDistance: 0.5
 --- !u!1 &3611041276022148391
 GameObject:
   m_ObjectHideFlags: 0

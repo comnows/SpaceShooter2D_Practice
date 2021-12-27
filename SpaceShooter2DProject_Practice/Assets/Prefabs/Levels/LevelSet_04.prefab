@@ -352,6 +352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7759092970968897059}
   - component: {fileID: 7759092970968897058}
+  - component: {fileID: 805411934319848303}
   m_Layer: 0
   m_Name: blue-planet
   m_TagString: Untagged
@@ -424,6 +425,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &805411934319848303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7759092970968897057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 736921f6f0e7e524385d6956cf105506, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minMoveDistance: -0.5
+  maxMoveDistance: 0.5
 --- !u!1 &7759092971817638943
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,6 +449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7759092971817638937}
   - component: {fileID: 7759092971817638936}
+  - component: {fileID: 2835951958013104532}
   m_Layer: 0
   m_Name: blue-planet (1)
   m_TagString: Untagged
@@ -506,6 +522,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2835951958013104532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7759092971817638943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 736921f6f0e7e524385d6956cf105506, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minMoveDistance: -0.5
+  maxMoveDistance: 0.5
 --- !u!1 &7759092971975271980
 GameObject:
   m_ObjectHideFlags: 0
