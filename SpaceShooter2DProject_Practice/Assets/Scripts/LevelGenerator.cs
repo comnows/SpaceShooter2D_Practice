@@ -30,8 +30,8 @@ public class LevelGenerator : MonoBehaviour
         GameObject connectionPoint = lastedLevelSet.transform.Find("LevelSet_ConnectPoint").gameObject;
 
         int randomLevelSetPattern = Random.Range(0, levelSetList.Length);
-        GameObject newLevelSet = Instantiate(levelSetList[randomLevelSetPattern]);
-        newLevelSet.transform.position = connectionPoint.transform.position;
+        GameObject newLevelSet = Instantiate(levelSetList[randomLevelSetPattern], connectionPoint.transform.position, Quaternion.identity);
+        //newLevelSet.transform.position = connectionPoint.transform.position;
 
         levelOnPlayList.Add(newLevelSet);
     }

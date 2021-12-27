@@ -11,10 +11,11 @@ public enum FiringType
 
 public class PlayerFiringSystem : MonoBehaviour
 {
+    [SerializeField] GameObject muzzlePrefabs;
     [SerializeField] GameObject bulletPrefabs;
     [SerializeField] GameObject bulletSpawnPoint;
 
-    [SerializeField] float firingDamage = 1.0f;
+    [SerializeField] int firingDamage = 1;
     [SerializeField] float firingMoveSpeed = 1.0f;
     [SerializeField] float firingRate = 1.0f;
 
@@ -49,7 +50,7 @@ public class PlayerFiringSystem : MonoBehaviour
 
         if(Time.time >= NextTimeToFire)
         {
-            NextTimeToFire = Time.time + 1.0f / (firingRate * (1 + (firingRateUpgradeLevel * 0.25f)));
+            NextTimeToFire = Time.time + 1.0f / (firingRate * (1 + (firingRateUpgradeLevel * 0.2f)));
 
             if(currentFiringType == FiringType.Normal)
             {
@@ -68,6 +69,7 @@ public class PlayerFiringSystem : MonoBehaviour
 
     void SpawnPlayerBullet_Normal()
     {
+        GameObject spawnedMuzzle = Instantiate(muzzlePrefabs, bulletSpawnPoint.transform.position - new Vector3(.5f, 0f, 0f), Quaternion.identity);
         GameObject spawnedBullet = Instantiate(bulletPrefabs);
         spawnedBullet.transform.position = bulletSpawnPoint.transform.position;
 
@@ -78,6 +80,12 @@ public class PlayerFiringSystem : MonoBehaviour
     {
         float currentBulletAngle = -15.0f;
         float angleIncreasePerBullet = 15.0f;
+
+        float muzzleScale = 2f;
+
+        GameObject spawnedMuzzle = Instantiate(muzzlePrefabs, bulletSpawnPoint.transform.position - new Vector3(.5f, 0f, 0f), Quaternion.identity);
+        spawnedMuzzle.transform.localScale = new Vector3(muzzleScale, muzzleScale, muzzleScale);
+        
         for(int bulletCount = 0; bulletCount < 3; bulletCount++)
         {
             GameObject spawnedBullet = Instantiate(bulletPrefabs);
@@ -91,10 +99,16 @@ public class PlayerFiringSystem : MonoBehaviour
 
     void SpawnPlayerBullet_Straight3()
     {
-        float currentBulletPosY = -0.4f;
-        float posIncreasePerBullet = 0.4f;
+        float muzzlePosOffset = .2f;
+
+        float currentBulletPosY = -0.45f;
+        float posIncreasePerBullet = 0.45f;
+
         for(int bulletCount = 0; bulletCount < 3; bulletCount++)
         {
+            GameObject spawnedMuzzle = Instantiate(muzzlePrefabs, bulletSpawnPoint.transform.position - new Vector3(.7f, 0f, 0f), Quaternion.identity);
+            spawnedMuzzle.transform.position += new Vector3(muzzlePosOffset * Mathf.Pow(-1,bulletCount + 1), currentBulletPosY + (posIncreasePerBullet * bulletCount), 0);
+
             GameObject spawnedBullet = Instantiate(bulletPrefabs);
             spawnedBullet.transform.position = bulletSpawnPoint.transform.position;
             spawnedBullet.transform.position += new Vector3(0, currentBulletPosY + (posIncreasePerBullet * bulletCount), 0);
@@ -157,6 +171,19 @@ public class PlayerFiringSystem : MonoBehaviour
         {
             currentFiringType = FiringType.Straight3;
             Debug.Log("Cheat Active : Change firing type to Straight3.");
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        if(other.CompareTag("Enemy"))
+        {
+            EnemyProperties enemyProperties = other.GetComponent<EnemyProperties>();
+            if(enemyProperties != null)
+            {
+                enemyProperties.Update_EnemyHealth(-100);
+                //damage yourself too
+            }
         }
     }
 }

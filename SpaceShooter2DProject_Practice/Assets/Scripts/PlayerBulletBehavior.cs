@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlayerBulletBehavior : MonoBehaviour
 {
     [SerializeField] Rigidbody2D bulletRB;
-    public float bulletDamage = 1.0f;
+    [SerializeField] GameObject hitEffectObj;
+
+    public int bulletDamage = 1;
     public float bulletMoveSpeed = 1.0f;
     // Start is called before the first frame update
     void Start()
@@ -24,5 +26,20 @@ public class PlayerBulletBehavior : MonoBehaviour
         }
     }
 
-    
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        if(other.CompareTag("Enemy"))
+        {
+            EnemyProperties enemyProperties = other.GetComponent<EnemyProperties>();
+
+            if(enemyProperties != null)
+            {
+                enemyProperties.Update_EnemyHealth(-bulletDamage);
+            }
+
+            Instantiate(hitEffectObj, transform.position, Quaternion.identity);
+            
+            Destroy(gameObject);
+        }
+    }
 }
