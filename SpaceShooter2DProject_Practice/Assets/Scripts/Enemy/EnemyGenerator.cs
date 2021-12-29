@@ -22,9 +22,17 @@ public class EnemyGenerator : MonoBehaviour
         {
             GameObject currentEnemyOnPlay = OnPlayEnemyList[index];
 
-            if(currentEnemyOnPlay.transform.position.x < -20.0f)
+            if(currentEnemyOnPlay != null)
             {
-                Destroy(currentEnemyOnPlay);
+                if(currentEnemyOnPlay.transform.position.x < -20.0f)
+                {
+                    Destroy(currentEnemyOnPlay);
+                    OnPlayEnemyList.RemoveAt(index);
+                    index -= 1;
+                }
+            }
+            else
+            {
                 OnPlayEnemyList.RemoveAt(index);
                 index -= 1;
             }

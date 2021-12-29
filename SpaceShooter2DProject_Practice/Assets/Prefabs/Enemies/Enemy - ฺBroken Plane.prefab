@@ -114,6 +114,7 @@ GameObject:
   - component: {fileID: 5727995732264504738}
   - component: {fileID: 5727995732264504733}
   - component: {fileID: 5727995732264504736}
+  - component: {fileID: 8055275543222735099}
   m_Layer: 0
   m_Name: "Enemy - \u0E3ABroken Plane"
   m_TagString: Enemy
@@ -194,3 +195,24 @@ MonoBehaviour:
   givenEXP: 1
   animator: {fileID: 5727995731896070543}
   enemyDestroyVFX: {fileID: 8715544864905457093, guid: a0edc8b3f0f3c8446960eb51353daf99, type: 3}
+--- !u!50 &8055275543222735099
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5727995732264504732}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

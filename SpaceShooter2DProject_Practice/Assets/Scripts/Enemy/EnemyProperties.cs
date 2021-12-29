@@ -42,7 +42,10 @@ public class EnemyProperties : MonoBehaviour
         {
             if(amount < 0)
             {
-                animator.SetTrigger("IsHit");
+                if(animator != null)
+                {
+                    animator.SetTrigger("IsHit");
+                }
             }
         }
     }

@@ -335,8 +335,8 @@ GameObject:
   - component: {fileID: 748097665}
   - component: {fileID: 748097667}
   m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
+  m_Name: Player Spaceship
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -718,8 +718,20 @@ MonoBehaviour:
   EnemySpawnPoint: {fileID: 2142234000}
   EnemyPatternList:
   - {fileID: 7182124427699649698, guid: b28830ae1ae9bd947b7ea809d349a93e, type: 3}
+  - {fileID: 7182124427699649698, guid: b28830ae1ae9bd947b7ea809d349a93e, type: 3}
+  - {fileID: 390131362698303674, guid: b1d97a27a88028b4498ac32de4110bd8, type: 3}
   - {fileID: 390131362698303674, guid: b1d97a27a88028b4498ac32de4110bd8, type: 3}
   - {fileID: 8929027958074777869, guid: c2b42df54ec757e4592cdb77429e8195, type: 3}
+  - {fileID: 8929027958074777869, guid: c2b42df54ec757e4592cdb77429e8195, type: 3}
+  - {fileID: 8462382057512707664, guid: 66e6c95bd30cdfc42b267b42c7d95a42, type: 3}
+  - {fileID: 8462382057512707664, guid: 66e6c95bd30cdfc42b267b42c7d95a42, type: 3}
+  - {fileID: 8462382057512707664, guid: 66e6c95bd30cdfc42b267b42c7d95a42, type: 3}
+  - {fileID: 8462382057512707664, guid: 66e6c95bd30cdfc42b267b42c7d95a42, type: 3}
+  - {fileID: 8462382057512707664, guid: 66e6c95bd30cdfc42b267b42c7d95a42, type: 3}
+  - {fileID: 8462382057512707664, guid: 66e6c95bd30cdfc42b267b42c7d95a42, type: 3}
+  - {fileID: 4666196313956151005, guid: c8cccaa493b12f64d9ad79295351d586, type: 3}
+  - {fileID: 4666196313956151005, guid: c8cccaa493b12f64d9ad79295351d586, type: 3}
+  - {fileID: 5800383472086525746, guid: dfeaedf2309ac2e428f8d147a1d394cf, type: 3}
 --- !u!1 &1375008724
 GameObject:
   m_ObjectHideFlags: 0
