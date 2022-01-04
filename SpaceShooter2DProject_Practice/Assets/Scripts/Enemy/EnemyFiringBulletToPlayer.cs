@@ -46,7 +46,7 @@ public class EnemyFiringBulletToPlayer : MonoBehaviour
 
     void SpawnEnemyBullet_Normal()
     {
-        GameObject spawnedMuzzle = Instantiate(muzzlePrefabs, bulletSpawnPoint.transform.position, Quaternion.identity);
+        GameObject spawnedMuzzle = Instantiate(muzzlePrefabs, bulletSpawnPoint.transform.position, bulletSpawnPoint.transform.rotation);
         GameObject spawnedBullet = Instantiate(bulletPrefabs);
         spawnedBullet.transform.position = bulletSpawnPoint.transform.position;
 

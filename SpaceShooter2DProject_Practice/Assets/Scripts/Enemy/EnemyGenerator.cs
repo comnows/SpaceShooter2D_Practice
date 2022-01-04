@@ -7,6 +7,9 @@ public class EnemyGenerator : MonoBehaviour
     [SerializeField] GameObject EnemySpawnPoint;
     [SerializeField] GameObject[] EnemyPatternList;
 
+    [SerializeField] bool usingOnTestList = false;
+    [SerializeField] GameObject[] EnemyPatternList_OnTest;
+
     List<GameObject> OnPlayEnemyList;
 
     // Start is called before the first frame update
@@ -46,8 +49,18 @@ public class EnemyGenerator : MonoBehaviour
 
     private void Random_SpawnEnemyPattern()
     {
-        int randomPatternIndex = Random.Range(0, EnemyPatternList.Length);
-        GameObject enemyPatternObj = Instantiate(EnemyPatternList[randomPatternIndex], EnemySpawnPoint.transform.position, Quaternion.identity);
+        GameObject enemyPatternObj = null;
+
+        if(!usingOnTestList)
+        {
+            int randomPatternIndex = Random.Range(0, EnemyPatternList.Length);
+            enemyPatternObj = Instantiate(EnemyPatternList[randomPatternIndex], EnemySpawnPoint.transform.position, Quaternion.identity);
+        }
+        else
+        {
+            int randomPatternIndex = Random.Range(0, EnemyPatternList_OnTest.Length);
+            enemyPatternObj = Instantiate(EnemyPatternList_OnTest[randomPatternIndex], EnemySpawnPoint.transform.position, Quaternion.identity);
+        }
 
         OnPlayEnemyList.Add(enemyPatternObj);
     }

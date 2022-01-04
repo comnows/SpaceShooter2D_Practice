@@ -123,12 +123,14 @@ GameObject:
   - component: {fileID: 8462382057512707666}
   - component: {fileID: 8462382057512707668}
   - component: {fileID: 8462382057512707669}
+  - component: {fileID: -5515592417088569432}
   - component: {fileID: 8462382057512707671}
   - component: {fileID: 8462382057512707670}
   - component: {fileID: 1349484671115230928}
   - component: {fileID: 2350032577105630064}
   - component: {fileID: 8462382057512707667}
   - component: {fileID: 5186315019690674699}
+  - component: {fileID: -8876837498571651781}
   m_Layer: 0
   m_Name: Enemy - Spaceship
   m_TagString: Enemy
@@ -194,6 +196,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4792279, y: 0.8614459}
   m_EdgeRadius: 0
+--- !u!50 &-5515592417088569432
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8462382057512707664}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &8462382057512707671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,3 +306,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyWhenReachLeft: -20
   destroyWhenReachRight: 20
+--- !u!114 &-8876837498571651781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8462382057512707664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5513a91022a78404e84002cd0d93c210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alwayPointToPlayer: 1
+  angleOffset: 180
