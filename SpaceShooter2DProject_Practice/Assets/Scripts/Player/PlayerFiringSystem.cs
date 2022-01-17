@@ -19,15 +19,8 @@ public class PlayerFiringSystem : MonoBehaviour
     [SerializeField] float firingMoveSpeed = 1.0f;
     [SerializeField] float firingRate = 1.0f;
 
-    FiringType currentFiringType = FiringType.Normal;
-
     //float spawnTimer = 0.0f;
     float NextTimeToFire = 0.0f;
-
-    int firingDamageUpgradeLevel = 0;
-    int firingMoveSpeedUpgradeLevel = 0;
-    int firingRateUpgradeLevel = 0;
-    int firingSizeUpgradeLevel = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -50,17 +43,17 @@ public class PlayerFiringSystem : MonoBehaviour
 
         if(Time.time >= NextTimeToFire)
         {
-            NextTimeToFire = Time.time + 1.0f / (firingRate * (1 + (firingRateUpgradeLevel * 0.2f)));
+            NextTimeToFire = Time.time + 1.0f / (firingRate * (1 + (PlayerStat.instance.firingRateUpgradeLevel * 0.2f)));
 
-            if(currentFiringType == FiringType.Normal)
+            if(PlayerStat.instance.currentFiringType == FiringType.Normal)
             {
                 SpawnPlayerBullet_Normal();
             }
-            else if(currentFiringType == FiringType.Spread3)
+            else if(PlayerStat.instance.currentFiringType == FiringType.Spread3)
             {
                 SpawnPlayerBullet_Spread3();
             }
-            else if(currentFiringType == FiringType.Straight3)
+            else if(PlayerStat.instance.currentFiringType == FiringType.Straight3)
             {
                 SpawnPlayerBullet_Straight3();
             }
@@ -119,13 +112,13 @@ public class PlayerFiringSystem : MonoBehaviour
 
     void SetSpawnedBullet(GameObject targetBullet)
     {
-        targetBullet.transform.localScale = targetBullet.transform.localScale * (1.0f + (firingSizeUpgradeLevel / 5.0f));
+        targetBullet.transform.localScale = targetBullet.transform.localScale * (1.0f + (PlayerStat.instance.firingSizeUpgradeLevel / 5.0f));
 
         PlayerBulletBehavior PBBehavior = targetBullet.GetComponent<PlayerBulletBehavior>();
         if(PBBehavior != null)
         {
-            PBBehavior.bulletDamage = firingDamage + firingDamageUpgradeLevel;
-            PBBehavior.bulletMoveSpeed = firingMoveSpeed + (firingMoveSpeedUpgradeLevel * 2.5f);
+            PBBehavior.bulletDamage = firingDamage + PlayerStat.instance.firingDamageUpgradeLevel;
+            PBBehavior.bulletMoveSpeed = firingMoveSpeed + (PlayerStat.instance.firingMoveSpeedUpgradeLevel * 2.5f);
         }
     }
 
@@ -133,57 +126,44 @@ public class PlayerFiringSystem : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Keypad1))
         {
-            firingDamageUpgradeLevel += 1;
+            PlayerStat.instance.firingDamageUpgradeLevel += 1;
             Debug.Log("Cheat Active : Increase firing damage by 1.");
         }
 
         if(Input.GetKeyDown(KeyCode.Keypad2))
         {
-            firingMoveSpeedUpgradeLevel += 1;
+            PlayerStat.instance.firingMoveSpeedUpgradeLevel += 1;
             Debug.Log("Cheat Active : Increase firing movespeed by 1.");
         }
 
         if(Input.GetKeyDown(KeyCode.Keypad3))
         {
-            firingRateUpgradeLevel += 1;
+            PlayerStat.instance.firingRateUpgradeLevel += 1;
             Debug.Log("Cheat Active : Increase firing rate by 1.");
         }
 
         if(Input.GetKeyDown(KeyCode.Keypad4))
         {
-            firingSizeUpgradeLevel += 1;
+            PlayerStat.instance.firingSizeUpgradeLevel += 1;
             Debug.Log("Cheat Active : Increase firing size by 1.");
         }
 
         if(Input.GetKeyDown(KeyCode.Keypad7))
         {
-            currentFiringType = FiringType.Normal;
+            PlayerStat.instance.currentFiringType = FiringType.Normal;
             Debug.Log("Cheat Active : Change firing type to Normal.");
         }
 
         if(Input.GetKeyDown(KeyCode.Keypad8))
         {
-            currentFiringType = FiringType.Spread3;
+            PlayerStat.instance.currentFiringType = FiringType.Spread3;
             Debug.Log("Cheat Active : Change firing type to Spread3.");
         }
 
         if(Input.GetKeyDown(KeyCode.Keypad9))
         {
-            currentFiringType = FiringType.Straight3;
+            PlayerStat.instance.currentFiringType = FiringType.Straight3;
             Debug.Log("Cheat Active : Change firing type to Straight3.");
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other) 
-    {
-        if(other.CompareTag("Enemy"))
-        {
-            EnemyProperties enemyProperties = other.GetComponent<EnemyProperties>();
-            if(enemyProperties != null)
-            {
-                enemyProperties.Update_EnemyHealth(-100);
-                //damage yourself too
-            }
         }
     }
 }

@@ -38,6 +38,13 @@ public class EnemyBulletBehavior : MonoBehaviour
             {
                 followTarget.SetTargetToFollow(other.gameObject);
             }
+
+            PlayerProperties playerProperties = other.gameObject.GetComponent<PlayerProperties>();
+
+            if(playerProperties != null)
+            {
+                PlayerStat.instance.Update_PlayerHealth(-bulletDamage);
+            }
             
             Destroy(gameObject);
         }

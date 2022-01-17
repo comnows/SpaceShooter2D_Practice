@@ -248,7 +248,7 @@ MonoBehaviour:
   muzzlePrefabs: {fileID: 2334123045216583578, guid: 91b0ab27ea3891348bc0de7fd5f98bbe, type: 3}
   bulletPrefabs: {fileID: 3301033263769254854, guid: 905cec1194b6da64da0a4bf6ed385463, type: 3}
   bulletSpawnPoint: {fileID: 8462382057055278889}
-  firingDamage: 1
+  firingDamage: 10
   firingMoveSpeed: 10
   firingRate: 1
 --- !u!114 &1349484671115230928

@@ -35,6 +35,8 @@ public class EnemyProperties : MonoBehaviour
         if(enemyHealth <= 0)
         {
             GameObject destroyVFX = Instantiate(enemyDestroyVFX, transform.position, Quaternion.identity);
+
+            PlayerStat.instance.Update_PlayerEXP(givenEXP);
             
             Destroy(gameObject);
         }

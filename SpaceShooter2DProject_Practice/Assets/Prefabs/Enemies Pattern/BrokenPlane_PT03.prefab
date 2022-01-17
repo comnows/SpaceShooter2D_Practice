@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &4523526805025562132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3789684921909361065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bbd79b8b870cc94e8bdec63bc6f2336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minRandX: -2
+  maxRandX: 2
 --- !u!114 &8358277256515796822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14,13 +28,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minRandX: -2
   maxRandX: 2
---- !u!114 &4523526805025562132
+--- !u!114 &1894768900666694215
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3789684921909361065}
+  m_GameObject: {fileID: 3789684922966322177}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bbd79b8b870cc94e8bdec63bc6f2336, type: 3}
@@ -88,20 +102,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcf8084e7d6a6f841bb93ae20d83e7e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1894768900666694215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3789684922966322177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bbd79b8b870cc94e8bdec63bc6f2336, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minRandX: -2
-  maxRandX: 2
 --- !u!1001 &8929027957507070999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -123,7 +123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5727995732264504739, guid: 222a9cc644e007045ae3686b1fcfac16, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -3.4
       objectReference: {fileID: 0}
     - target: {fileID: 5727995732264504739, guid: 222a9cc644e007045ae3686b1fcfac16, type: 3}
       propertyPath: m_LocalPosition.z
@@ -190,7 +190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5727995732264504739, guid: 222a9cc644e007045ae3686b1fcfac16, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -1.7
       objectReference: {fileID: 0}
     - target: {fileID: 5727995732264504739, guid: 222a9cc644e007045ae3686b1fcfac16, type: 3}
       propertyPath: m_LocalPosition.z
